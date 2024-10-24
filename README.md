@@ -44,26 +44,28 @@ The following is the description of the language.
 
 Production Rules for the Context Free Grammar which represents the language.
 
+```
 S : S ';'
-   | S ';' S ';'
-   | if (B) { S }
-   | if (B) { S } else { S }
-   | for(S; B; S) { S }
-   | while (B) { S }
-   | id = E ';'
-   ;
+  | S ';' S ';'
+  | if (B) { S }
+  | if (B) { S } else { S }
+  | for(S; B; S) { S }
+  | while (B) { S }
+  | id = E ';'
+  ;
 
 B : E comparision E
-   | B && B
-   | B || B
-   | !B
-   ;
+  | B && B
+  | B || B
+  | !B
+  ;
 
 E : E + E
-   | E * E
-   | E / E
-   | - E
-   | (E)
-   | id
-   ;
+  | E * E
+  | E / E
+  | - E
+  | (E)
+  | id
+  ;
+```
 
